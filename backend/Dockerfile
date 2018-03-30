@@ -1,42 +1,5 @@
 FROM jjanzic/docker-python3-opencv
 
-RUN apt-get update \
-&& apt-get install -y \
-	wget \
-	curl \
-	git \
-	unzip \
-	cmake \
-	build-essential \
-	sudo \
-	mesa-utils \
-	apt-transport-https ca-certificates \
-	python3-pip \
-	pkg-config \
-	python-dev \ 
-	python-opencv \ 
-	libopencv-dev \ 
-	libav-tools  \ 
-	libjpeg-dev \ 
-	libpng-dev \ 
-	libtiff-dev \ 
-	libjasper-dev \ 
-	libgtk2.0-dev \ 
-	python-numpy \ 
-	python-pycurl \ 
-	libatlas-base-dev \
-	gfortran \
-	webp \ 
-	qt5-default \
-	libvtk6-dev \ 
-	zlib1g-dev \
-        yasm \
-        libswscale-dev \
-        libtbb2 \
-        libtbb-dev \
-        libavformat-dev \
-        libpq-dev
-
 # Create backend directory
 RUN mkdir /backend
 COPY . /backend
